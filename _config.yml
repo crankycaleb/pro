@@ -69,6 +69,7 @@ author:
   youtube: yourlink   # eg. user/daattali or channel/daattali
   spotify: yourname   # eg. daattali
   telephone: yourphone   # eg. +14159998888
+  gitlab: crankycaleb
 
 # Select which links to show in the footer
 footer-links-active:
@@ -87,6 +88,7 @@ footer-links-active:
   youtube: false
   spotify: false
   telephone: false
+  gitlab: true
 
 # Select which share links to show in posts
 share-links-active:
