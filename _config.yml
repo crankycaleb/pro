@@ -4,7 +4,7 @@
 # baseurl is the website's URL without the hostname
 
 # If you are building a simple GitHub user page (http://username.github.io) then use these settings:
-url: "https://crankycaleb.gitlab.io"
+url: "https://crankycaleb.io"
 baseurl: ""
 
 # If you are building a GitHub project page then use these settings:
@@ -39,7 +39,7 @@ navbar-links:
   Credits:
     - Theme I forked: "http://deanattali.com/beautiful-jekyll/"
     - Bot proof mailto: "http://robspangler.com/blog/encrypt-mailto-links-to-stop-email-spam/"
-    - GitHub Pages: "https://pages.github.com/"
+    - GitLab Pages: "https://about.gitlab.com/"
 
 # Image to show in the navigation bar - image must be a square (width = height)
 # Remove this parameter if you don't want an image in the navbar
@@ -57,7 +57,7 @@ author:
   name: Caleb Wagnon
   email: "&#x63;&#97;&#x6c;&#101;&#98;&#x40;&#x63;&#114;&#x61;&#x6e;&#x6b;&#121;&#99;&#x61;&#108;&#101;&#98;&#x2e;&#x69;&#111;"
   facebook: yourname  # eg. daattali
-  github: crankycaleb    # eg. daattali
+#  github: crankycaleb    # eg. daattali
   twitter: crankycaleb   # eg. daattali
   reddit: crankycaleb    # eg. daattali
   google-plus: +yourname   # eg. +DeanAttali or 109424658772469020925
