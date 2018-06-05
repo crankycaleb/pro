@@ -14,6 +14,11 @@ pages:
   stage: deploy
   script:
     - bundle exec jekyll build -d public
+    - cd public
+    - mkdir -p /.well-known/acme-challenge
+    - cd .well-known
+    - cd acme-challenge
+    - printf "%s" JrC7khHB8r2s4DiNNJXvETNod8uQ2suyql5pDV7b3Bk.SxPcxP8A1yLaeXm8nl8Zht3A5cRQmdQI8RE-p6UDEwA > JrC7khHB8r2s4DiNNJXvETNod8uQ2suyql5pDV7b3Bk
   artifacts:
     paths:
       - public
