@@ -1,0 +1,55 @@
+==================================================================
+https://keybase.io/crankycaleb
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://crankycaleb.io
+  * I am crankycaleb (https://keybase.io/crankycaleb) on keybase.
+  * I have a public key ASDVhB-7OWbT2ByOkfNOsbfXG6NzdKzm_DB8XbjQegSgWgo
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "01200cd612bd2e9ec968cdd6320c459f415d6328a6766e8d1c2ffc8ea72e5c5b327f0a",
+            "host": "keybase.io",
+            "kid": "0120d5841fbb3966d3d81c8e91f34eb1b7d71ba37374ace6fc307c5db8d07a04a05a0a",
+            "uid": "67f1e1937f652ad13f0ed0ed1e961f19",
+            "username": "crankycaleb"
+        },
+        "service": {
+            "hostname": "crankycaleb.io",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "client": {
+        "name": "keybase.io go client",
+        "version": "1.0.23"
+    },
+    "ctime": 1495286439,
+    "expire_in": 504576000,
+    "merkle_root": {
+        "ctime": 1495286378,
+        "hash": 
+"c628106b65ec319cc1b0114d71447fc76580f20873e570e741c2927688fdae46811f21925832a25020bd394d9c06d02dd8290a2b3570b23782c8028d0844b137",
+        "seqno": 1097668
+    },
+    "prev": "d1643ea44541323ec1a7cd85d898fc30ceb55038d6cd4ac0eb8c85f8227e2a59",
+    "seqno": 23,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg1YQfuzlm09gcjpHzTrG31xujc3Ss5vwwfF240HoEoFoKp3BheWxvYWTFAvp7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwMGNkNjEyYmQyZTllYzk2OGNkZDYzMjBjNDU5ZjQxNWQ2MzI4YTY3NjZlOGQxYzJmZmM4ZWE3MmU1YzViMzI3ZjBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwZDU4NDFmYmIzOTY2ZDNkODFjOGU5MWYzNGViMWI3ZDcxYmEzNzM3NGFjZTZmYzMwN2M1ZGI4ZDA3YTA0YTA1YTBhIiwidWlkIjoiNjdmMWUxOTM3ZjY1MmFkMTNmMGVkMGVkMWU5NjFmMTkiLCJ1c2VybmFtZSI6ImNyYW5reWNhbGViIn0sInNlcnZpY2UiOnsiaG9zdG5hbWUiOiJjcmFua3ljYWxlYi5pbyIsInByb3RvY29sIjoiaHR0cDoifSwidHlwZSI6IndlYl9zZXJ2aWNlX2JpbmRpbmciLCJ2ZXJzaW9uIjoxfSwiY2xpZW50Ijp7Im5hbWUiOiJrZXliYXNlLmlvIGdvIGNsaWVudCIsInZlcnNpb24iOiIxLjAuMjMifSwiY3RpbWUiOjE0OTUyODY0MzksImV4cGlyZV9pbiI6NTA0NTc2MDAwLCJtZXJrbGVfcm9vdCI6eyJjdGltZSI6MTQ5NTI4NjM3OCwiaGFzaCI6ImM2MjgxMDZiNjVlYzMxOWNjMWIwMTE0ZDcxNDQ3ZmM3NjU4MGYyMDg3M2U1NzBlNzQxYzI5Mjc2ODhmZGFlNDY4MTFmMjE5MjU4MzJhMjUwMjBiZDM5NGQ5YzA2ZDAyZGQ4MjkwYTJiMzU3MGIyMzc4MmM4MDI4ZDA4NDRiMTM3Iiwic2Vxbm8iOjEwOTc2Njh9LCJwcmV2IjoiZDE2NDNlYTQ0NTQxMzIzZWMxYTdjZDg1ZDg5OGZjMzBjZWI1NTAzOGQ2Y2Q0YWMwZWI4Yzg1ZjgyMjdlMmE1OSIsInNlcW5vIjoyMywidGFnIjoic2lnbmF0dXJlIn2jc2lnxEBzlRtqgU+EwP4VsnHZQf+oflunYPnhnN+005ma6lgRXxgs5adphkWkUAmii3uT8Vsofbb4NQXNhywG/VYdCWIMqHNpZ190eXBlIKRoYXNogqR0eXBlCKV2YWx1ZcQgCleA9m/Q120g2QULLNyu3JYEKUPAMfyMhTUAg8UO7gijdGFnzQICp3ZlcnNpb24B
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/crankycaleb
+
+==================================================================
