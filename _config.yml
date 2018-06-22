@@ -57,7 +57,7 @@ author:
   name: Caleb Wagnon
   email: "&#x63;&#97;&#x6c;&#101;&#98;&#x40;&#x63;&#114;&#x61;&#x6e;&#x6b;&#121;&#99;&#x61;&#108;&#101;&#98;&#x2e;&#x69;&#111;"
   facebook: yourname  # eg. daattali
-#  github: crankycaleb    # eg. daattali
+  github: crankycaleb    # eg. daattali
   twitter: crankycaleb   # eg. daattali
   reddit: crankycaleb    # eg. daattali
   google-plus: +yourname   # eg. +DeanAttali or 109424658772469020925
@@ -69,7 +69,7 @@ author:
   youtube: yourlink   # eg. user/daattali or channel/daattali
   spotify: yourname   # eg. daattali
   telephone: yourphone   # eg. +14159998888
-  gitlab: crankycaleb
+#  gitlab: crankycaleb
 
 # Select which links to show in the footer
 footer-links-active:
@@ -88,7 +88,7 @@ footer-links-active:
   youtube: false
   spotify: false
   telephone: false
-  gitlab: true
+  gitlab: false
 
 # Select which share links to show in posts
 share-links-active:
