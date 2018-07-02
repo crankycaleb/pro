@@ -55,7 +55,7 @@ avatar: "/img/avatar-icon.png"
 # Important: you must keep the "name" parameter, everything else you can remove
 author:
   name: Caleb Wagnon
-  email: "&#109;&#97;&#105;&#108;&#x74;&#111;&#x3a;&#99;&#x61;&#108;&#x65;&#98;&#x40;&#x64;&#105;&#x67;&#105;&#x74;&#97;&#x6c;&#100;&#121;&#x6e;&#97;&#x6d;&#105;&#99;&#x2e;&#111;&#x72;&#x67;"
+  email: "&#99;&#x61;&#108;&#x65;&#98;&#x40;&#x64;&#105;&#x67;&#105;&#x74;&#97;&#x6c;&#100;&#121;&#x6e;&#97;&#x6d;&#105;&#99;&#x2e;&#111;&#x72;&#x67;"
   facebook: yourname  # eg. daattali
   github: crankycaleb    # eg. daattali
   twitter: crankycaleb   # eg. daattali
