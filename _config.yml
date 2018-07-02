@@ -4,7 +4,7 @@
 # baseurl is the website's URL without the hostname
 
 # If you are building a simple GitHub user page (http://username.github.io) then use these settings:
-url: "https://crankycaleb.io"
+url: "https://digitaldynamic.org"
 baseurl: ""
 
 # If you are building a GitHub project page then use these settings:
@@ -14,7 +14,7 @@ baseurl: ""
 # Of course don't forget to change the username and projectname to YOUR username and project
 
 # Name of website
-title: crankycaleb.io
+title: digitaldynamic.org
 
 # Short description of your site
 description: My own techie corner of the Internet
@@ -55,7 +55,7 @@ avatar: "/img/avatar-icon.png"
 # Important: you must keep the "name" parameter, everything else you can remove
 author:
   name: Caleb Wagnon
-  email: "&#x63;&#97;&#x6c;&#101;&#98;&#x40;&#x63;&#114;&#x61;&#x6e;&#x6b;&#121;&#99;&#x61;&#108;&#101;&#98;&#x2e;&#x69;&#111;"
+  email: "&#109;&#97;&#105;&#108;&#x74;&#111;&#x3a;&#99;&#x61;&#108;&#x65;&#98;&#x40;&#x64;&#105;&#x67;&#105;&#x74;&#97;&#x6c;&#100;&#121;&#x6e;&#97;&#x6d;&#105;&#99;&#x2e;&#111;&#x72;&#x67;"
   facebook: yourname  # eg. daattali
   github: crankycaleb    # eg. daattali
   twitter: crankycaleb   # eg. daattali
@@ -99,7 +99,7 @@ share-links-active:
 
 # How to display the link to the website in the footer
 # Remove this if you don't want a link in the footer
-url-pretty: "crankycaleb.io"  # eg. "deanattali.com/beautiful-jekyll"
+url-pretty: "digitaldynamic.org"  # eg. "deanattali.com/beautiful-jekyll"
 
 # --- Misc --- #
 # Fill in your Disqus shortname (NOT the userid) if you want to support Disqus comments
