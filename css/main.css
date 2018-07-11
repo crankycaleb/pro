@@ -157,7 +157,7 @@ img {
 }
 
 .navbar-custom.top-nav-short .avatar-container{
-  opacity: 0;
+  opacity: 1;
 }
 
 .navbar-custom.top-nav-expanded .avatar-container  {
