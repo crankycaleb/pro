@@ -30,6 +30,9 @@ Install the rpm:
 Poke holes in firewalld to allow access to the web management frontend:
 
 `sudo firewall-cmd --permanent --add-port=8200/tcp`
+
+and then:
+
 `sudo firewall-cmd --reload`
 
 Start Duplicati and tell it to listen on interfaces other than localhost:
@@ -53,6 +56,9 @@ Move it:
 Then enable at startup and start the service:
 
 `sudo systemctl enable duplicati`
+
+and then:
+
 `sudo systemctl start duplicati`
 
 Now to move to configuring for our needs via the web interface.
@@ -73,4 +79,4 @@ The web frontend is fairly self explanatory (and mobile friendly!) as shown in s
 
 There are too many backup destination provider options to cover here, so I recommend you check their site for documentation on the one(s) you plan to use. The backup job setup process is simple so I'm going to provide the email notification flags you'll want to add to cover all of your backup jobs.
 
-Go to "Settings"
+Go to Settings
