@@ -9,9 +9,9 @@ tags:
 subtitle: Simple and Powerful Encrypted Backups
 ---
 
-Personally, one of the scariest parts of self-hosting is having all my data under one roof. Power issues, theft, fire or other natural disasters are just a few of the potential risks to my data. Luckily, the open source project Duplicati https://www.duplicati.com/ has proven to be a reliable option. Open Source, AES 256 encryption, and a wide variety of backup destinations supporting anywhere from Webdav, S3, to OneDrive, Mega, Google Drive, Dropbox, and others. This solution has given me offsite backups that are encrypted, while also leveraging the proprietary storage provider space I've accumulated (Samsung 100GB OneDrive storage for two years promos, etc) with no cost and minimal risk of data snooping.
+Personally, one of the scariest parts of self-hosting is having all my data under one roof. Power issues, theft, fire or other natural disasters are just a few of the potential risks to my data. Luckily, the open source project Duplicati (https://www.duplicati.com/) has proven to be a reliable option. Open Source, AES 256 encryption, and a wide variety of backup destinations supporting anywhere from Webdav, S3, to OneDrive, Mega, Google Drive, Dropbox, and others. This solution has given me offsite backups that are encrypted, while also leveraging the proprietary storage provider space I've accumulated (Samsung 100GB OneDrive storage for two years promos, etc) with no cost and minimal risk of data snooping.
 
-This post is by no means intended to be a detailed Duplicati informative guide, as their website already provides plenty of documentation. I'm documenting my own experience that myself or others can use as a "Getting Started" reference to build the basics of a functioning backup solution in Fedora 28 with emailed logs. Let's begin.
+This post is by no means intended to be a detailed Duplicati informative guide, as their website already provides plenty of documentation. I'm documenting my own experience that myself or others can use as a "Getting Started" gritty reference to build the basics of a functioning backup solution in Fedora 28 with emailed logs. Let's begin.
 
 **Duplicati Setup**
 
@@ -55,12 +55,7 @@ Then enable at startup and start the service:
 `sudo systemctl enable duplicati`
 `sudo systemctl start duplicati`
 
+Now to move to configuring for our needs via the web interface.
 
+**Configuring a Backup Job**
 
-Then run:
-
-`sudo blah`
-
-Blah blah blah
-
-**The Minor Gotchas**
