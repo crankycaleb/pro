@@ -9,7 +9,7 @@ tags:
 subtitle: Simple and Powerful Encrypted Backups
 ---
 
-Personally, one of the scariest parts of self-hosting is having all my data under one roof. Power issues, theft, fire or other natural disasters are just a few potential
+Personally, one of the scariest parts of self-hosting is having all my data under one roof. Power issues, theft, fire or other natural disasters are just a few of the potential risks to my data.
 Blah Blah backups are good AES 256 encrypted
 
 **Duplicati Setup**
