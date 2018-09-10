@@ -15,18 +15,43 @@ This post is by no means intended to be a detailed Duplicati informative guide, 
 
 **Duplicati Setup**
 
-BlahBlah Fedora start here wget the rpm etc:
+Install the prerequisites:
 
 `sudo dnf install mono-core libappindicator libappindicator-sharp desktop-file-utils`
+
+Grab the latest rpm (check their site from a web browser first):
+
 `wget https://updates.duplicati.com/beta/duplicati-2.0.3.3-2.0.3.3_beta_20180402.noarch.rpm`
+
+Install the rpm:
+
 `sudo rpm -ivh duplicati*`
-`sudo duplicati-server --webservice-interface=any`
+
+Poke holes in firewalld to allow access to the web management frontend:
+
 `sudo firewall-cmd --permanent --add-port=8200/tcp`
 `sudo firewall-cmd --reload`
-leave running in term go to web interface, set password, then go back to term ctrl-c
+
+Start Duplicati and tell it to listen on interfaces other than localhost:
+
+`sudo duplicati-server --webservice-interface=any`
+
+Leave running in terminal, go to the web interface from another pc (http://serverip:8200), set a password, then go back to terminal and ctrl-c.
+
+To work with many third party services, you're going to need to run a cert-sync after setup:
+
 `sudo cert-sync /etc/pki/tls/certs/ca-bundle.crt`
+
+By default, Duplicati expects a graphical desktop and is started by a tray object. I'm running a headless nextcloud instance in this example, so I need to be able to run this as a service instead. Let's grab a service config:
+
 `wget https://raw.githubusercontent.com/duplicati/duplicati/master/Installer/debian/debian/duplicati.service`
+
+Move it:
+
 `sudo mv duplicati.service /etc/systemd/system`
+
+Then enable at startup and start the service:
+
 `sudo systemctl enable duplicati`
 `sudo systemctl start duplicati`
 
