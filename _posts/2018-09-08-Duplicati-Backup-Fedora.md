@@ -9,7 +9,7 @@ tags:
 subtitle: Simple and Powerful Encrypted Backups
 ---
 
-Personally, one of the scariest parts of self-hosting is having all my data under one roof. Power issues, theft, fire or other natural disasters are just a few of the potential risks to my data. Luckily, the open source project Duplicati (https://www.duplicati.com/) has proven to be a reliable option. Open Source, AES 256 encryption, and a wide variety of backup destinations supporting anywhere from Webdav, S3, to OneDrive, Mega, Google Drive, Dropbox, and others. This solution has given me offsite backups that are encrypted, while also leveraging the proprietary storage provider space I've accumulated (Samsung 100GB OneDrive storage for two years promos, etc) with no cost and minimal risk of data snooping.
+Personally, one of the scariest parts of self-hosting is having all my data under one roof. Power issues, theft, fire or other natural disasters are just a few of the potential risks to my data. Luckily, the open source project [Duplicati](https://www.duplicati.com/) has proven to be a reliable option. Open Source, AES 256 encryption, and a wide variety of backup destinations supporting anywhere from Webdav, S3, to OneDrive, Mega, Google Drive, Dropbox, and others. This solution has given me offsite backups that are encrypted, while also leveraging the proprietary storage provider space I've accumulated (Samsung 100GB OneDrive storage for two years promos, etc) with no cost and minimal risk of data snooping.
 
 This post is by no means intended to be a detailed Duplicati informative guide, as their website already provides plenty of documentation. I'm documenting my own experience that myself or others can use as a "Getting Started" gritty reference to build the basics of a functioning backup solution in Fedora 28 with emailed logs. Let's begin.
 
@@ -77,7 +77,7 @@ The web frontend is fairly self explanatory (and mobile friendly!) as shown in s
 
 ![Picker](/img/Duplicati-SourcePicker.jpg)
 
-There are too many backup destination provider options to cover here, so I recommend you check their site for documentation on the one(s) you plan to use. A good place to start with configuring your first backup is here: (https://www.duplicati.com/articles/Getting-Started/). The backup job setup process is simple so I'm going to provide the email notification flags you'll want to add to cover all of your backup jobs.
+There are too many backup destination provider options to cover here, so I recommend you check their site for documentation on the one(s) you plan to use. A good place to start with configuring your first backup is [here.](https://www.duplicati.com/articles/Getting-Started/) The backup job setup process is simple so I'm going to provide the email notification flags you'll want to add to cover all of your backup jobs.
 
 Go to the main Settings section. You'll want to add your email service settings (of which you'll need to know) in the main settings section so you don't have to specify them manually as additional flags to every single job you create. These will be "advanced" additions you'll select from the dropbox, add, and configure one at a time. 
 
