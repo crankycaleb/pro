@@ -63,5 +63,6 @@ There are a few things assumed in this post. First, that you are doing this on y
 
 Secondly, it is assumed that you are *only* forwarding the necessary ports from your router for nextcloud services (in this case). So long as you aren't forwarding tcp 8200 then the outside world won't be able to access the management interface.
 
-With those things in mind, let's begin.
+The web frontend is fairly self explanatory (and mobile friendly!) as shown in some of their own screenshots:
+
 
