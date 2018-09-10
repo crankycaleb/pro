@@ -6,6 +6,7 @@ tags:
 - duplicati
 - backup
 - fedora
+- nextcloud
 subtitle: Simple and Powerful Encrypted Backups
 ---
 
