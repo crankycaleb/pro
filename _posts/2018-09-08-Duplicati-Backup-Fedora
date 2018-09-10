@@ -65,4 +65,12 @@ Secondly, it is assumed that you are *only* forwarding the necessary ports from 
 
 The web frontend is fairly self explanatory (and mobile friendly!) as shown in some of their own screenshots:
 
+![Desktop](/img/Duplicati-UI.jpg)
 
+![Mobile](/img/Duplicati-mobile.jpg)
+
+![Picker](/img/Duplicati-SourcePicker.jpg)
+
+There are too many backup destination provider options to cover here, so I recommend you check their site for documentation on the one(s) you plan to use. The backup job setup process is simple so I'm going to provide the email notification flags you'll want to add to cover all of your backup jobs.
+
+Go to "Settings"
