@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Backing Up Fedora 28 with Duplicati
+title: Backing Up Fedora 28 with Duplicati 2
 category: Backup
 tags:
 - duplicati
@@ -13,7 +13,7 @@ Personally, one of the scariest parts of self-hosting is having all my data unde
 
 This post is by no means intended to be a detailed Duplicati informative guide, as their website already provides plenty of documentation. I'm documenting my own experience that myself or others can use as a "Getting Started" gritty reference to build the basics of a functioning backup solution in Fedora 28 with emailed logs. Let's begin.
 
-**Duplicati Setup**
+**Duplicati 2 Setup**
 
 Install the prerequisites:
 
@@ -58,4 +58,10 @@ Then enable at startup and start the service:
 Now to move to configuring for our needs via the web interface.
 
 **Configuring a Backup Job**
+
+There are a few things assumed in this post. First, that you are doing this on your home (trusted) network. Duplicati runs a web service on port 8200 with no native ssl support. Perhaps you can implement ssl support with some work, but it wasn't immediately apparent and not the point of this document. You only need the web service for configuration changes (or not at all if you want to learn the cli syntax for Duplicati - at this time I do not as it can get a bit involved depending on the storage provider you backup to). You could very well just remove the firewall rule and block port 8200 again once you're finished. Just note that the password you set could possibly be sniffed by another device on your home network.
+
+Secondly, it is assumed that you are *only* forwarding the necessary ports from your router for nextcloud services (in this case). So long as you aren't forwarding tcp 8200 then the outside world won't be able to access the management interface.
+
+With those things in mind, let's begin.
 
