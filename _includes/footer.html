@@ -36,6 +36,17 @@
             </a>
           </li>
        {% endif %}
+		{% if site.footer-links-active.nextcloud %}
+          <li>
+            <a href="https://nextcloud.com/federation#caleb@cloud.digitaldynamic.org" title="Nextcloud">
+              <span class="fa-stack fa-lg" aria-hidden="true">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-cloud fa-stack-1x fa-inverse"></i>
+              </span>
+              <span class="sr-only">Nextcloud</span>
+            </a>
+          </li>
+       {% endif %}
 		  {% if site.author.twitter and site.footer-links-active.twitter %}
           <li>
             <a href="https://twitter.com/{{ site.author.twitter }}" title="Twitter">
