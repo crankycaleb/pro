@@ -8,74 +8,74 @@ tags:
 subtitle: Sometimes You Gotta Get Your Hands Dirty
 ---
 
-Personally, one of the scariest parts of self-hosting is having all my data under one roof. Power issues, theft, fire or other natural disasters are just a few of the potential risks to my data. Luckily, the open source project [Duplicati](https://www.duplicati.com/) has proven to be a reliable option. Open Source, AES 256 encryption, and a wide variety of backup destinations supporting anywhere from Webdav, S3, to OneDrive, Mega, Google Drive, Dropbox, and others. This solution has given me offsite backups that are encrypted, while also leveraging the proprietary storage provider space I've accumulated (Samsung 100GB OneDrive storage for two years promos, etc) with no cost and minimal risk of data snooping.
+Nextcloud has one of the best track records I've ever experienced with next to flawless and easy service upgrades, but sometimes I just like to clean things up a bit myself. I had an issue where the updater section just *refused* to show up at all in the administration section of my Nextcloud 13 instance. This was almost certainly my own fault due to some experimentation I had done throughout the life of my server, so it was time for a manual upgrade. Nextcloud does staggered release rollouts for their update utility, that way if there happens to be an issue they can stop it to get that fixed before it hits everyone (I don't know that they've ever had to stop one). So this is also a handy way to "jump the gun" and get your server upgraded sooner rather than days later. If you're *not* in my situation and can access the update gui, you can also temporarily switch to the "Beta" channel to trigger the upgrade availability and then switch back to "Stable" afterward. Here's my notes for the manual upgrade that should help you when all else fails and things go south.
 
-This post is by no means intended to be a detailed Duplicati informative guide, as their website already provides plenty of documentation. I'm documenting my own experience that myself or others can use as a "Getting Started" gritty reference to build the basics of a functioning backup solution in Fedora 28 with emailed logs. Let's begin.
+**Temporarily allow writes to the http context**
 
-**Duplicati 2 Setup**
+If you're running Fedora like me and followed my setup guides, you'll need to temporarily modify SELinux to allow writes to the http context. You'll need to do this step even if you're using the web based updater rather than the manual way:
 
-Install the prerequisites:
+`setsebool -P httpd_unified on`
 
-`sudo dnf install mono-core libappindicator libappindicator-sharp desktop-file-utils`
+**Shutdown apache and backup nextcloud**
 
-Grab the latest rpm (check their site from a web browser first):
+Another good reason to always have your data directory housed *outside* of your nextcloud install is for much simpler backups and upgrades. If you followed my howto then that is how you are already setup. If you're running the ownbackup app (I highly recommend that) you also already have your database backed up to your data directory.
 
-`wget https://updates.duplicati.com/beta/duplicati-2.0.3.3-2.0.3.3_beta_20180402.noarch.rpm`
+So let's first shutdown apache:
 
-Install the rpm:
+`sudo systemctl stop httpd`
 
-`sudo rpm -ivh duplicati*`
+Then *move* our nextcloud dir to be a backup directory instead.
 
-Poke holes in firewalld to allow access to the web management frontend:
+`mv /var/www/html/nextcloud /var/www/html/nextcloud-backup`
 
-`sudo firewall-cmd --permanent --add-port=8200/tcp`
+**Download the latest nextcloud package and move things into place**
 
-and then:
+As of this writing, the latest version is 14. Let's grab it and make sure we're still outside of our web directory, like in our home directory:
 
-`sudo firewall-cmd --reload`
+`wget https://download.nextcloud.com/server/releases/nextcloud-14.0.0.zip`
 
-Start Duplicati and tell it to listen on interfaces other than localhost:
+Then unzip:
 
-`sudo duplicati-server --webservice-interface=any`
+`unzip nextcloud-14.0.0.zip`
 
-Leave running in terminal, go to the web interface from another pc (http://serverip:8200), set a password, then go back to terminal and ctrl-c.
+Then move into place:
 
-To work with many third party services, you're going to need to run a cert-sync after setup:
+`mv nextcloud /var/www/html/`
 
-`sudo cert-sync /etc/pki/tls/certs/ca-bundle.crt`
+Now we need to grab our config.php from our backup and place it in the new install:
 
-By default, Duplicati expects a graphical desktop and is started by a tray object. I'm running a headless nextcloud instance in this example, so I need to be able to run this as a service instead. Let's grab a service config:
+`cp /var/www/html/nextcloud-backup/config/config.php /var/www/html/nextcloud/config/`
 
-`wget https://raw.githubusercontent.com/duplicati/duplicati/master/Installer/debian/debian/duplicati.service`
+At this point, you'll also want to compare the apps directory of your backup with the apps directory of the new install and probably copy those over as well. You'll still need to enable them after the upgrade. Your data is still safe in your database, so you can also just browse the app store and add them again fresh if you prefer.
 
-Move it:
+**Fix the permissions**
 
-`sudo mv duplicati.service /etc/systemd/system`
+Now we'll want to get our permissions on all the shuffling we've done straightened out. Go ahead and cd to /var/www/html if you aren't already there and then do the following:
 
-Then enable at startup and start the service:
+`chown -R apache:apache nextcloud`
 
-`sudo systemctl enable duplicati`
+Then:
 
-and then:
+`find nextcloud/ -type d -exec chmod 750 {} \;`
 
-`sudo systemctl start duplicati`
+and finally:
 
-Now to move to configuring for our needs via the web interface.
+`find nextcloud/ -type f -exec chmod 640 {} \;`
 
-**Configuring a Backup Job**
+**Bringing things backup**
 
-There are a few things assumed in this post. First, that you are doing this on your home (trusted) network. Duplicati runs a web service on port 8200 with no native ssl support. Perhaps you can implement ssl support with some work, but it wasn't immediately apparent and not the point of this document. You only need the web service for configuration changes (or not at all if you want to learn the cli syntax for Duplicati - at this time I do not as it can get a bit involved depending on the storage provider you backup to). You could very well just remove the firewall rule and block port 8200 again once you're finished. Just note that the password you set could possibly be sniffed by another device on your home network.
+Start apache:
 
-Secondly, it is assumed that you are *only* forwarding the necessary ports from your router for nextcloud services (in this case). So long as you aren't forwarding tcp 8200 then the outside world won't be able to access the management interface.
+`sudo systemctl start httpd`
 
-The web frontend is fairly self explanatory (and mobile friendly!) as shown in some of their own screenshots:
+And finally, launch the actual upgrade process. This may take a few minutes:
 
-![Desktop](/img/Duplicati-UI.jpg)
+`sudo -u www-data php occ upgrade`
 
-![Mobile](/img/Duplicati-mobile.jpg)
+**Finishing up**
 
-![Picker](/img/Duplicati-SourcePicker.jpg)
+After the upgrade is complete, you're ready to go checkout your instance and the settings page to make sure everything is there. Then you'll have the usual process of going in and enabling your apps again. Don't forget to lock down with SELinux again:
 
-There are too many backup destination provider options to cover here, so I recommend you check their site for documentation on the one(s) you plan to use. A good place to start with configuring your first backup is [here.](https://www.duplicati.com/articles/Getting-Started/) The backup job setup process is simple so I'm going to provide the email notification flags you'll want to add to cover all of your backup jobs.
+`setsebool -P httpd_unified off`
 
-Go to the main Settings section. You'll want to add your email service settings (of which you'll need to know) in the main settings section so you don't have to specify them manually as additional flags to every single job you create. These will be "advanced" additions you'll select from the dropbox, add, and configure one at a time. 
+**Extra points - 
