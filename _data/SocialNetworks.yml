@@ -94,7 +94,7 @@ twitch:
 nextcloud:
   name: "Nextcloud"
   baseURL: "https://nextcloud.com/federation#caleb@cloud.digitaldynamic.org"
-  icon: "fa-nextcloud"
+  icon: "fa-cloud-upload"
 
 yelp:
   name: "Yelp"
