@@ -62,7 +62,7 @@ and finally:
 
 `find nextcloud/ -type f -exec chmod 640 {} \;`
 
-**Bringing things backup**
+**Bringing things back up**
 
 Start apache:
 
@@ -78,4 +78,12 @@ After the upgrade is complete, you're ready to go checkout your instance and the
 
 `setsebool -P httpd_unified off`
 
-**Extra points - 
+When I checked my settings admin page after these steps, my autoupdate section gui was back! So now for future upgrades I can just do `setsebool -P httpd_unified on` from the terminal, use the handy graphical upgrade process from the browser, and then lock back down with `setsebool -P httpd_unified off`!
+
+**Extra points - lock down your referrer-policy a bit more**
+
+After upgrade, you may see an additionaly complaint in your settings check page with a recommendation to lock down your referrer-policy some more. In my case, this is done by editing ssl.conf in /etc/httpd/conf.d/ and adding the following in the `_default_:443` section beneath the existing "Header always set StrictTransport..." line:
+
+`Header always set Referrer-Policy "strict-origin"`
+
+Save, restart apache, and refresh your settings page again to see the issue resolved!
