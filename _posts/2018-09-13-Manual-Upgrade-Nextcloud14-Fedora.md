@@ -78,7 +78,7 @@ After the upgrade is complete, you're ready to go checkout your instance and the
 
 `setsebool -P httpd_unified off`
 
-When I checked my settings admin page after these steps, my autoupdate section gui was back! So now for future upgrades I can just do `setsebool -P httpd_unified on` from the terminal, use the handy graphical upgrade process from the browser, and then lock back down with `setsebool -P httpd_unified off`!
+When I checked my settings admin page after these steps, my autoupdate section gui was back! So now for future upgrades I can just do `setsebool -P httpd_unified on` from the terminal, use the handy graphical upgrade process from the browser, and then lock back down with `setsebool -P httpd_unified off`
 
 **Extra points - lock down your referrer-policy a bit more**
 
