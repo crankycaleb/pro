@@ -71,7 +71,7 @@ author:
   youtube: yourlink   # eg. user/daattali or channel/daattali
   spotify: yourname   # eg. daattali
   telephone: yourphone   # eg. +14159998888
-  nextcloud: "https://nextcloud.com/federation#caleb@cloud.digitaldynamic.org"
+  nextcloud: caleb@cloud.digitaldynamic.org
 #  gitlab: crankycaleb
 
 # Select which links to show in the footer
