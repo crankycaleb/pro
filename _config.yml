@@ -71,6 +71,7 @@ author:
   youtube: yourlink   # eg. user/daattali or channel/daattali
   spotify: yourname   # eg. daattali
   telephone: yourphone   # eg. +14159998888
+  nextcloud: "https://nextcloud.com/federation#caleb@cloud.digitaldynamic.org"
 #  gitlab: crankycaleb
 
 # Select which links to show in the footer
@@ -91,6 +92,7 @@ footer-links-active:
   spotify: false
   telephone: false
   gitlab: false
+  nextcloud: true
 
 # Select which share links to show in posts
 share-links-active:
