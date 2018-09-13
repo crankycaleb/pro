@@ -90,6 +90,11 @@ twitch:
   name: "Twitch"
   baseURL: "https://www.twitch.tv/"
   icon: "fa-twitch"
+  
+nextcloud:
+  name: "Nextcloud"
+  baseURL: "https://nextcloud.com/federation#caleb@cloud.digitaldynamic.org"
+  icon: "fa-nextcloud"
 
 yelp:
   name: "Yelp"
