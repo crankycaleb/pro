@@ -16,3 +16,5 @@ My name is Caleb Wagnon. A few brief points about me:
 
 This is just my little corner of the internet. I'll use it mostly to document how-to's and things I've come 
 across in my line of work. Hopefully it can be of use to others at some point.
+
+[![Share with me via Nextcloud](/img/nextcloudshare.png)](https://nextcloud.com/federation#caleb@cloud.digitaldynamic.org)
