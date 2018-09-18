@@ -5,7 +5,8 @@ layout: base
 <div class="intro-header"></div>
 
 <div role="main" class="container">
-     <script src="https://digitaldynamic.org/simple-jekyll-search.min.js"></script>
+  {{ content }}
+          <script src="https://digitaldynamic.org/simple-jekyll-search.min.js"></script>
     <script>
 SimpleJekyllSearch({
   search-input: document.querySelector('.search-input'),
@@ -14,5 +15,4 @@ SimpleJekyllSearch({
   searchResultTemplate: '<li><a href="{{ site.url }}{url}">{title}</a></li>'
 })
 </script>
-  {{ content }}
 </div>
