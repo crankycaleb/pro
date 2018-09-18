@@ -11,5 +11,3 @@ group:          navigation
 <input type="text" id="search-input" placeholder="search posts..">
 <br/>
 <div id="results-container"></div>
-<li><a href="{url}">{title}</a></li>
-
