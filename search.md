@@ -8,6 +8,6 @@ group:          navigation
 
 ## Search
 
-<input type="text" id="search-input" placeholder="search posts..">
+<input type="text" id="search-input" autofocus="autofocus" placeholder="search posts..">
 <br/>
 <div id="results-container"></div>
