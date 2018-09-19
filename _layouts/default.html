@@ -10,6 +10,11 @@ layout: base
 <script>
       window.simpleJekyllSearch = new SimpleJekyllSearch({
         searchInput: document.getElementById('search-input'),
+        searchInput: document.getElementById('search-input'),
+        setInterval(function(){
+ var focusbox;
+ focusbox = document.getElementById('search-input');
+ focusbox.focus();
         resultsContainer: document.getElementById('results-container'),
         json: '{{ site.baseurl }}/search.json',
         searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>',
