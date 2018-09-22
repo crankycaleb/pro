@@ -41,10 +41,10 @@ linkedin:
   baseURL: "https://linkedin.com/in/"
   icon: "fa-linkedin"
 
-xing:
-  name: "Xing"
-  baseURL: "https://www.xing.com/profile/"
-  icon: "fa-xing"
+paypal:
+  name: "PayPal"
+  baseURL: "https://www.paypal.me/"
+  icon: "fa-paypal"
 
 stackoverflow:
   name: "StackOverflow"
