@@ -25,6 +25,7 @@ sudo fedora-upgrade
 ```
 
 This can take a bit of time and you will be prompted with a few questions throughout the process (you can generally just accept the defaults). Whenever it asks you if you want to do an online or offline upgrade, I've not had any issues doing the online upgrade. This process will take quite a while and will ask you similar questions toward the end of which you can again generally just accept the defaults. You'll then be told to reboot. Once you do so, you'll be running Fedora 28!
+
 ****
 ### 2.) The Minor Gotchas:
 
