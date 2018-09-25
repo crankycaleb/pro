@@ -13,6 +13,7 @@ The end result of this howto *should* (notice a lot of techies don't speak in ab
 ### 1.) Important Notes for the Fedora Server OS Install:
 
 Whenever you install Fedora Server, select the minimal install **only**. Do **not** select any of the other predefined bundles or packages or you will be in a world of hurt following this howto later. Select the custom server install only. You should also set a static ip and dns name during the install so that much can be ready to go. As far as partitioning, some people will just give everything (other than boot and swap) to the root partition (/). If that isn't your preference, then it is important to note that this howto will have your Nextcloud data directory exist *outside* of the web directories, so outside of /var (I use /data as a mountpoint in this howto). Since that will be the brunt of your data you'll want to plan accordingly with your space and mountpoints.
+
 ****
 ### 2.) First Boot:
 
@@ -35,6 +36,7 @@ There will likely be a kernel update that requires a reboot, so go ahead and do 
 ```
 sudo reboot
 ```
+
 ****
 ### 3.) Start Putting Things Into Place:
 
@@ -75,6 +77,7 @@ chown apache:apache -R /var/www/html/nextcloud
 
 chown apache:apache -R /data
 ```
+
 ****
 ### 4.) Open Up the Firewall:
 
@@ -87,6 +90,7 @@ firewall-cmd --zone=public --add-port=https/tcp --permanent
 
 firewall-cmd --reload
 ```
+
 ****
 ### 5.) Get a Database Ready:
 
@@ -127,6 +131,7 @@ mysql -e "DROP DATABASE test;"
 
 mysql -e "FLUSH PRIVILEGES;"
 ```
+
 ****
 ### 6.) Configure SELinux Permissions:
 
@@ -143,6 +148,7 @@ Execute the script (will take several seconds):
 ```
 ~/nextcloud_selinux.sh
 ```
+
 ****
 ### 7.) Configure Web Services:
 
@@ -171,6 +177,7 @@ Restart `php-fpm` to apply opcache settings:
 ```
 systemctl restart php-fpm
 ```
+
 ****
 ### 8.) Important Notes About DNS:
 
@@ -230,6 +237,7 @@ systemctl restart httpd
 ```
 
 The hard stuff is done!
+
 ****
 ### 9.) Switch Document Root to Your Nextcloud Install:
 
@@ -268,6 +276,7 @@ systemctl restart httpd
 ```
 
 You should now be able to browse and access your nextcloud via the base url.
+
 ****
 ### 10.) Cron Setup:
 
@@ -294,6 +303,7 @@ Next lets go to our nextcloud web interface settings --> basic settings under ad
 ![step1](/img/fedoranextcloud/nextcloudcron.png)
 
 You can come back here and make sure the job is running now since the "Last job ran" should never be greater than 15 minutes.
+
 ****
 ### 11.) SSL Setup with Let's Encrypt:
 
@@ -352,6 +362,7 @@ systemctl restart httpd
 ```
 
 Now refresh or browse to your domain with https:// and you should be live with a good certificate!
+
 ****
 ### 12.) Enable HTTP Strict Transport Security:
 
@@ -393,6 +404,7 @@ ServerSignature Off
 You can test before and after at https://tools.geekflare.com/tools/http-header-test.
 
 Now you have a fully functional and decently secured nextcloud server of your own! Documentation for the nextcloud project is great, so go dig around in the apps and find the next steps for customizing your setup.
+
 ****
 ### Future Updates:
 
