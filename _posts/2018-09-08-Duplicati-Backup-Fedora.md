@@ -89,7 +89,7 @@ sudo systemctl start duplicati
 
 Now to move to configuring for our needs via the web interface.
 ****
-### 2.) Configuring a Backup Job
+### 2.) Configuring a Backup Job:
 
 Duplicati runs a web service on port 8200 with no native ssl support. We'll add SSL support at the end of this document, we just want to make sure we get everything else working first.
 
