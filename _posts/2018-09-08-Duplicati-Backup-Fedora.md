@@ -21,49 +21,71 @@ This post is by no means intended to be a detailed Duplicati informative guide, 
 
 Install the prerequisites:
 
-`sudo dnf install mono-core libappindicator libappindicator-sharp desktop-file-utils`
+```
+sudo dnf install mono-core libappindicator libappindicator-sharp desktop-file-utils
+```
 
 Grab the latest rpm (check their site from a web browser first):
 
-`wget https://updates.duplicati.com/beta/duplicati-2.0.3.3-2.0.3.3_beta_20180402.noarch.rpm`
+```
+wget https://updates.duplicati.com/beta/duplicati-2.0.3.3-2.0.3.3_beta_20180402.noarch.rpm
+```
 
 Install the rpm:
 
-`sudo rpm -ivh duplicati*`
+```
+sudo rpm -ivh duplicati*
+```
 
 Poke holes in firewalld to allow access to the web management frontend:
 
-`sudo firewall-cmd --permanent --add-port=8200/tcp`
+```
+sudo firewall-cmd --permanent --add-port=8200/tcp
+```
 
 and then:
 
-`sudo firewall-cmd --reload`
+```
+sudo firewall-cmd --reload
+```
 
 Start Duplicati and tell it to listen on interfaces other than localhost:
 
-`sudo duplicati-server --webservice-interface=any`
+```
+sudo duplicati-server --webservice-interface=any
+```
 
 Leave running in terminal, go to the web interface from another pc (http://serverip:8200), set a password, then go back to terminal and ctrl-c.
 
 To work with many third party services, you're going to need to run a cert-sync after setup:
 
-`sudo cert-sync /etc/pki/tls/certs/ca-bundle.crt`
+```
+sudo cert-sync /etc/pki/tls/certs/ca-bundle.crt
+```
 
 By default, Duplicati expects a graphical desktop and is started by a tray object. I'm running a headless nextcloud instance in this example, so I need to be able to run this as a service instead. Let's grab a service config:
 
-`wget https://raw.githubusercontent.com/duplicati/duplicati/master/Installer/debian/debian/duplicati.service`
+```
+wget https://raw.githubusercontent.com/duplicati/duplicati/master/Installer/debian/debian/duplicati.service
+```
 
 Move it:
 
-`sudo mv duplicati.service /etc/systemd/system`
+```
+sudo mv duplicati.service /etc/systemd/system
+```
 
 Then enable at startup and start the service:
 
-`sudo systemctl enable duplicati`
+```
+sudo systemctl enable duplicati
+```
 
 and then:
 
-`sudo systemctl start duplicati`
+```
+sudo systemctl start duplicati
+```
 
 Now to move to configuring for our needs via the web interface.
 
@@ -143,44 +165,66 @@ Hopefully this can get you started with the basics and just go from there. Of no
 
 Now that you've tested and have a working backup setup, let's lock the web interface down with SSL by setting up an nginx reverse proxy. We'll start by installing nginx:
 
-`sudo dnf install nginx`
+```
+sudo dnf install nginx
+```
 
 Then we'll need to navigate to /etc/nginx/ to rm the default nginx.conf and replace it with one that won't conflict with our nextcloud installation:
 
-`wget https://raw.githubusercontent.com/crankycaleb/scripts/master/nginx.conf`
+```
+wget https://raw.githubusercontent.com/crankycaleb/scripts/master/nginx.conf
+```
 
 We need to edit this file in your favorite editor, and replace `yourfqdn` with your actual fully qualified domain name in the following 4 lines:
 
 (Line 41)
-`server_name  yourfqdn;`
+```
+server_name  yourfqdn;
+```
 
 (Line 44)
-`ssl_certificate "/etc/letsencrypt/live/yourfqdn/cert.pem";`
+```
+ssl_certificate "/etc/letsencrypt/live/yourfqdn/cert.pem";
+```
 
 (Line 45)
-`ssl_certificate_key "/etc/letsencrypt/live/yourfqdn/privkey.pem";`
+```
+ssl_certificate_key "/etc/letsencrypt/live/yourfqdn/privkey.pem";
+```
 
 (and Line 64)
-`proxy_redirect	http://localhost:8200 https://yourfqdn:8443;`
+```
+proxy_redirect	http://localhost:8200 https://yourfqdn:8443;
+```
 
 Then save and exit your editor. Next we'll want to start nginx:
 
-`sudo systemctl start nginx`
+```
+sudo systemctl start nginx
+```
 
 and enable it at boot
 
-`sudo systemctl enable nginx`
+```
+sudo systemctl enable nginx
+```
 
 Now we certainly can't forget to poke a hole in our firewall for it:
 
-`sudo firewall-cmd --permanent --add-port=8443/tcp`
+```
+sudo firewall-cmd --permanent --add-port=8443/tcp
+```
 
 Remove the plain http hole:
 
-`sudo firewall-cmd --permanent --remove-port=8200/tcp`
+```
+sudo firewall-cmd --permanent --remove-port=8200/tcp
+```
 
 And reload our firewall:
 
-`sudo firewall-cmd --reload`
+```
+sudo firewall-cmd --reload
+```
 
 And now you should have a fully working SSL encrypted web frontend for Duplicati 2 when you browse to https://yourfqdn:8443. This howto assumes you followed my other howto's and have configured letsencrypt. If you have not done so and prefer to use your own self signed certificates, you'll need to adjust those lines in nginx.conf accordingly.
