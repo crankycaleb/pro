@@ -89,8 +89,8 @@ sudo systemctl start duplicati
 
 Now to move to configuring for our needs via the web interface.
 
-**Configuring a Backup Job**
-
+### Configuring a Backup Job
+****
 Duplicati runs a web service on port 8200 with no native ssl support. We'll add SSL support at the end of this document, we just want to make sure we get everything else working first.
 
 The web frontend is fairly self explanatory (and mobile friendly!) as shown in some of their own screenshots:
@@ -161,8 +161,8 @@ Default value: all
 
 Hopefully this can get you started with the basics and just go from there. Of note to the nextcloud world, I was sure to already have the OwnBackup app installed and doing scheduled database backup dumps. It stores those in your /data directory, so will be included in your backups already whenever you select that as one of the backup source locations.
 
-**ADDENDUM: Adding SSL**
-
+### ADDENDUM: Adding SSL
+****
 Now that you've tested and have a working backup setup, let's lock the web interface down with SSL by setting up an nginx reverse proxy. We'll start by installing nginx:
 
 ```
