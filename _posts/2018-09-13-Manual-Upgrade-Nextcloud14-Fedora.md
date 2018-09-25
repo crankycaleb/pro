@@ -34,7 +34,7 @@ Then *move* our nextcloud dir to be a backup directory instead:
 mv /var/www/html/nextcloud /var/www/html/nextcloud-backup
 ```
 ****
-### 3.) Download the latest nextcloud package and move things into place:
+### 3.) Get the latest nextcloud package and move things into place:
 
 As of this writing, the latest version is 14. Let's grab it and make sure we're still outside of our web directory, like in our home directory:
 
