@@ -18,8 +18,8 @@ This post is by no means intended to be a detailed Duplicati informative guide, 
 
 
 **Duplicati 2 Setup**
-
-*********
+----
+****
 Install the prerequisites:
 
 ```
