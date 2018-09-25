@@ -28,7 +28,7 @@ So let's first shutdown apache:
 sudo systemctl stop httpd
 ```
 
-Then *move* our nextcloud dir to be a backup directory instead.
+Then *move* our nextcloud dir to be a backup directory instead:
 
 ```
 mv /var/www/html/nextcloud /var/www/html/nextcloud-backup
