@@ -10,6 +10,7 @@ subtitle: Small Bump in the Road
 
 With the Nextcloud upgrade to 14.0.1 I had an issue where the web based update would hang and logs just showed a cron job hung when it wasn't at all. There has been some talk in support threads and I'll post what worked for me.
 
+
 ### Temporarily allow writes to the http context
 ****
 If you're running Fedora like me and followed my setup guides, you'll need to temporarily modify SELinux to allow writes to the http context. You'll always need to do this step before updating:
@@ -18,9 +19,11 @@ If you're running Fedora like me and followed my setup guides, you'll need to te
 setsebool -P httpd_unified on
 ```
 
+
 ### Fix the Nextcloud version number
 ****
 One issue seems to be with the version that is stated after the upgrade to the initial Nextcloud 14. You'll need to edit your config/config.php in your nextcloud directory and change the 'version' line to say 14.0.0.0. Mine said 14.0.0.19. 
+
 
 ### Run the occ updater
 ****
@@ -35,6 +38,7 @@ Next, run the upgrade as apache user:
 ```
 sudo -u apache ./occ upgrade
 ```
+
 
 ### Lock things back down
 ****
