@@ -17,8 +17,7 @@ Personally, one of the scariest parts of self-hosting is having all my data unde
 This post is by no means intended to be a detailed Duplicati informative guide, as their website already provides plenty of documentation. I'm documenting my own experience that myself or others can use as a "Getting Started" gritty reference to build the basics of a functioning backup solution in Fedora 28 with emailed logs. Let's begin.
 
 
-**Duplicati 2 Setup**
-----
+### Duplicati 2 Setup
 ****
 Install the prerequisites:
 
