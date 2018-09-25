@@ -49,7 +49,6 @@ and afterward it doesn't hurt to run:
 ```
 systemctl restart php-fpm
 ``` 
-for good measure.
 
 ****
 Once you've done these steps, not only should your Nextcloud server be back in business, but also running Fedora 28!
