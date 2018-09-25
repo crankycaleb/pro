@@ -156,7 +156,8 @@ systemctl enable httpd
 
 Update the `php-opcache` ini file:
 
-```sed -i -e 's/;opcache.enable_cli=0/opcache.enable_cli=1/' /etc/php.d/10-opcache.ini;
+```
+sed -i -e 's/;opcache.enable_cli=0/opcache.enable_cli=1/' /etc/php.d/10-opcache.ini;
 
 sed -i -e 's/opcache.max_accelerated_files=4000/opcache.max_accelerated_files=10000/' /etc/php.d/10-opcache.ini;
 
