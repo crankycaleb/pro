@@ -14,7 +14,7 @@ With the Nextcloud upgrade to 14.0.1 I had an issue where the web based update w
 
 If you're running Fedora like me and followed my setup guides, you'll need to temporarily modify SELinux to allow writes to the http context. You'll always need to do this step before updating:
 
-`setsebool -P httpd_unified on`
+```setsebool -P httpd_unified on```
 
 **Fix the Nextcloud version number**
 
