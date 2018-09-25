@@ -26,21 +26,29 @@ One issue seems to be with the version that is stated after the upgrade to the i
 
 Then you'll need to go to the root of your Nextcloud directory and make the occ upgrade script executable:
 
-`chmod +x occ`
+```
+chmod +x occ
+```
 
 Next, run the upgrade as apache user:
 
-`sudo -u apache ./occ upgrade`
+```
+sudo -u apache ./occ upgrade
+```
 
 **Lock things back down**
 
 After that is finished and you're upgraded, you'll want to remove the execute flag:
 
-`chmod -x occ`
+```
+chmod -x occ
+```
 
 And lastly, set the http context back to prevent writes:
 
-`setsebool -P httpd_unified off`
+```
+setsebool -P httpd_unified off
+```
 
 And there you have it. Fairly simple adjustment to get 14.0.1 running in no time.
 
