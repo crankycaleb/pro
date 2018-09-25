@@ -28,7 +28,7 @@ Then you'll need to go to the root of your Nextcloud directory and make the occ 
 
 Next, run the upgrade as apache user:
 
-`sudo -u apache ./occ upgrade
+`sudo -u apache ./occ upgrade`
 
 **Lock things back down**
 
