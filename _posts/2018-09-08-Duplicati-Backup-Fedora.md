@@ -17,8 +17,8 @@ Personally, one of the scariest parts of self-hosting is having all my data unde
 This post is by no means intended to be a detailed Duplicati informative guide, as their website already provides plenty of documentation. I'm documenting my own experience that myself or others can use as a "Getting Started" gritty reference to build the basics of a functioning backup solution in Fedora 28 with emailed logs. Let's begin.
 
 
-### Duplicati 2 Setup
-****
+### 1.) Duplicati 2 Setup:
+
 Install the prerequisites:
 
 ```
@@ -88,9 +88,9 @@ sudo systemctl start duplicati
 ```
 
 Now to move to configuring for our needs via the web interface.
-
-### Configuring a Backup Job
 ****
+### 2.) Configuring a Backup Job
+
 Duplicati runs a web service on port 8200 with no native ssl support. We'll add SSL support at the end of this document, we just want to make sure we get everything else working first.
 
 The web frontend is fairly self explanatory (and mobile friendly!) as shown in some of their own screenshots:
@@ -160,7 +160,7 @@ Values: Unknown, Success, Warning, Error, Fatal, All
 Default value: all
 
 Hopefully this can get you started with the basics and just go from there. Of note to the nextcloud world, I was sure to already have the OwnBackup app installed and doing scheduled database backup dumps. It stores those in your /data directory, so will be included in your backups already whenever you select that as one of the backup source locations.
-
+****
 ### ADDENDUM: Adding SSL
 ****
 Now that you've tested and have a working backup setup, let's lock the web interface down with SSL by setting up an nginx reverse proxy. We'll start by installing nginx:
@@ -226,5 +226,5 @@ And reload our firewall:
 ```
 sudo firewall-cmd --reload
 ```
-
+****
 And now you should have a fully working SSL encrypted web frontend for Duplicati 2 when you browse to https://yourfqdn:8443. This howto assumes you followed my other howto's and have configured letsencrypt. If you have not done so and prefer to use your own self signed certificates, you'll need to adjust those lines in nginx.conf accordingly.
