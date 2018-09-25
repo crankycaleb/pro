@@ -374,6 +374,7 @@ systemctl restart httpd
 ```
 
 and now your security warnings for HSTS should be cleared up with "All checks passed" on the basic settings section of the administrative settings pane.
+
 ****
 ### 13.) Disable Header Info Leak:
 
