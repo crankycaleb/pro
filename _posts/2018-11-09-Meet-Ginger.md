@@ -5,7 +5,7 @@ category: Lighthearted
 tags:
 - lighthearted
 - gaming
-subtitle: A Modestly AMD Fanboy Rig
+subtitle: A Modest AMD Fanboy Rig
 ---
 
 The General Setup
