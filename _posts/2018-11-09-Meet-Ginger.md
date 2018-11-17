@@ -10,11 +10,11 @@ subtitle: A Modest AMD Fanboy Rig
 
 The General Setup
 
-![Moar](/img/2018pcbuild1.jpg)
+![Moaar](/img/2018pcbuild1.jpg)
 
 More!
 
-![Mooaarr](/img/2018pcbuild4.jpg)
+![Mooarr](/img/2018pcbuild4.jpg)
 
 Specs:
 - AMD Ryzen 5 1600 with RGB Wraith Cooler
