@@ -31,5 +31,6 @@ Specs:
 - Razer Seiren X Mic
 - Klipsch 2.1 Speakers/Sub
 - HP Omen 25 144hz freesync monitor
+- HP 24w secondary monitor
 
 
