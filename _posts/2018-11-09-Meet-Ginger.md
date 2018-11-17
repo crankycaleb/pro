@@ -27,7 +27,8 @@ Specs:
 - Corsair AF120 Quiet Edition Red LED Fans
 - Logitech G413 Carbon Edition Keyboard
 - Logitech G502 Mouse
-- Logitech C922 Webcam (not shown)
+- Logitech C922 Webcam
+- Razer Seiren X Mic
 - Klipsch 2.1 Speakers/Sub
 - HP Omen 25 144hz freesync monitor
 
