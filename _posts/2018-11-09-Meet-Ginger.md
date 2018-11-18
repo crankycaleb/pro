@@ -10,7 +10,7 @@ subtitle: A Modest AMD Fanboy Rig
 
 The General Setup
 
-![Moaar](/img/2018pcbuild1.jpg)
+![Moar](/img/2018pcbuild1.jpg)
 
 More!
 
