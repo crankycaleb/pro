@@ -10,7 +10,7 @@ subtitle: A Modest AMD Fanboy Rig
 
 The General Setup
 
-![Moar](/img/2018pcbuild.jpg)
+![Moar](/img/2018pcbuild1.jpg)
 
 More!
 
@@ -29,6 +29,7 @@ Specs:
 - Logitech G502 Mouse
 - Logitech C922 Webcam
 - Razer Seiren X Mic
+- Elgato HD60 S Game Capture Card
 - Klipsch 2.1 Speakers/Sub
 - HP Omen 25 144hz freesync monitor
 - HP 24w secondary monitor
