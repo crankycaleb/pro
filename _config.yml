@@ -71,6 +71,7 @@ author:
   youtube: yourlink   # eg. user/daattali or channel/daattali
   spotify: yourname   # eg. daattali
   paypal: crankycaleb   # eg. +14159998888
+  mixer: crankycaleb
 #  nextcloud: caleb@cloud.digitaldynamic.org
 #  gitlab: crankycaleb
 
@@ -93,6 +94,7 @@ footer-links-active:
   paypal: true
   gitlab: false
   nextcloud: false
+  mixer: true
 
 # Select which share links to show in posts
 share-links-active:
