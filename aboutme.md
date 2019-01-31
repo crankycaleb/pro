@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About me
-subtitle: Humble K12 Technology Professional
+subtitle: Humble Technophile
 ---
 
 My name is Caleb. A few brief points about me:
