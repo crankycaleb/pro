@@ -49,7 +49,7 @@ paypal:
 streamlabs:
   name: "Streamlabs"
   baseURL: "https://streamlabs.com/CrankyCaleb/"
-  icon: "fa-mug-hot"
+  icon: "fa-coffee"
 
 snapchat:
   name: "Snapchat"
