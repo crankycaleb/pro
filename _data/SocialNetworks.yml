@@ -46,10 +46,10 @@ paypal:
   baseURL: "https://www.paypal.me/"
   icon: "fa-paypal"
 
-stackoverflow:
-  name: "StackOverflow"
-  baseURL: "https://stackoverflow.com/users/"
-  icon: "fa-stack-overflow"
+streamlabs:
+  name: "Streamlabs"
+  baseURL: "https://streamlabs.com/CrankyCaleb/"
+  icon: "fa-mug-hot"
 
 snapchat:
   name: "Snapchat"
