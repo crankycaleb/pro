@@ -86,12 +86,12 @@ footer-links-active:
   reddit: false
   linkedin: false
   xing: false
-  stackoverflow: false
+  streamlabs: true
   snapchat: false
   instagram: false
   youtube: false
   spotify: false
-  paypal: true
+  paypal: false
   gitlab: false
   nextcloud: false
   mixer: true
