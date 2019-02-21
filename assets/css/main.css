@@ -2716,7 +2716,7 @@ input, select, textarea {
 			}
 
 				body:not(.is-touch) .tiles article:hover > .image:before {
-					background-color: #FFFFFF;
+					background-color: #515050;
 					opacity: 0.35;
 				}
 
