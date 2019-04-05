@@ -2639,10 +2639,10 @@ input, select, textarea {
 				-webkit-justify-content: center;
 				-ms-justify-content: center;
 				justify-content: center;
-				-moz-transition: background-color 0.0s ease, -moz-transform 0.5s ease;
-				-webkit-transition: background-color 0.0s ease, -webkit-transform 0.5s ease;
-				-ms-transition: background-color 0.0s ease, -ms-transform 0.5s ease;
-				transition: background-color 0.0s ease, transform 0.5s ease;
+				-moz-transition: -moz-transform 0.5s ease;
+				-webkit-transition: -webkit-transform 0.5s ease;
+				-ms-transition: -ms-transform 0.5s ease;
+				transition: transform 0.5s ease;
 				position: absolute;
 				top: 0;
 				left: 0;
