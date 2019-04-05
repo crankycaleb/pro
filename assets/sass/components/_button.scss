@@ -82,6 +82,7 @@
 		&.disabled,
 		&:disabled {
 			@include vendor('pointer-events', 'none');
-			opacity: 0.25;
+			opacity: 0.0;
+			///was 0.25
 		}
 	}
