@@ -53,7 +53,8 @@
 		}
 
 		&:active {
-			background-color: transparentize(_palette(accent1), 0.9);
+			background-color: transparentize(_palette(accent1), 0.0);
+			///was 0.9
 		}
 
 		&.small {
