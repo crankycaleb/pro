@@ -1788,7 +1788,7 @@ form textarea {
 .news .entry-title {
   font-size: 14px;
   font-size: 1em;
-  font-weight: 300;
+  font-weight: 400;
   margin-bottom: 0;
   position: relative;
 }
@@ -1833,7 +1833,7 @@ form textarea {
   overflow: hidden;
 }
 .page .entry-title {
-  font-weight: 300;
+  font-weight: 400;
   margin: 50px 0 30px;
 }
 .page .entry-content p {
