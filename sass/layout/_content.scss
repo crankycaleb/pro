@@ -40,7 +40,7 @@
 	}
 	.section-title{
 		@include em(48);
-		font-weight: 300;
+		font-weight: 400;
 		margin-bottom: 0;
 	}
 	.section-subtitle{
@@ -116,7 +116,7 @@
 	}
 	.entry-title{
 		@include em(14);
-		font-weight: 300;
+		font-weight: 400;
 		margin-bottom: 0;
 		position: relative;
 		a{
@@ -164,7 +164,7 @@
 	overflow: hidden;
 
 	.entry-title{
-		font-weight:300;
+		font-weight:400;
 		margin: 50px 0 30px;
 	}
 
