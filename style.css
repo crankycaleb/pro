@@ -9,10 +9,10 @@
 /* body{
     background-color: var(--bgColor); */
 body{
-    background-color: #2401206e;
+    background-color: #59148c;
     background-image: url("purple.png");
     background-position: center center;
-    background-size: cover;
+    background-size: 100%;
     background-attachment: fixed;
     background-repeat: no-repeat;
 }
