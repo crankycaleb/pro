@@ -11,8 +11,8 @@
 body{
     background-color: #07020c;
     background-image: url("purple.png");
-    background-position: center center;
-    background-size: cover;
+    background-position: 100% 100%;
+    background-size: 100%;
     background-attachment: fixed;
     background-repeat: no-repeat;
 }
