@@ -12,7 +12,7 @@ body{
     background-color: #59148c;
     background-image: url("purple.png");
     background-position: center center;
-    background-size: 100%;
+    background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
 }
