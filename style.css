@@ -9,9 +9,8 @@
 /* body{
     background-color: var(--bgColor); */
 body{
-    background-color: #07020c;
-    background-image: url("purple.png");
-    background-position: 100% 100%;
+    background-color: #4f127c;
+    background-position: center center;
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
