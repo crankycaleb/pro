@@ -25,6 +25,14 @@ body{
     border-radius: 50%;
 }
 
+#userLogo{
+    width: 200px;
+    height: 50px;
+    display: block;
+    margin: 35px auto 20px;
+    border-radius: 0%;
+}
+
 #userName{
     color: #bbb;
     font-size: 1rem;
