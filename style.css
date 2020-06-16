@@ -1,8 +1,8 @@
 /* Style Settings */
 @import url('https://fonts.googleapis.com/css?family=Days One:400,700&display=swap');
 :root {
-    --bgColor:#E6E6E6;
-    --accentColor: #1C1C1C;
+    --bgColor:#1C1C1C;
+    --accentColor: #E6E6E6;
     --font: 'Days One', sans-serif;
 }
 
