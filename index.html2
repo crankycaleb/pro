@@ -2,6 +2,13 @@
 <html>
    <head>
       <title>ClassicCaleb.pro coming right up!</title>
+       <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@classiccalebtv" />
+  <meta name="twitter:creator" content="@classiccalebtv" />
+   <meta property="og:url" content="https://classiccaleb.pro" />
+    <meta property="og:title" content="Hi, I'm ClassicCaleb" />
+    <meta property="og:description" content="Casual and people focused high fidelity content." />
+    <meta property="og:image" content="https://raw.githubusercontent.com/crankycaleb/pro/master/images/twitcard.JPG" />
       <meta http-equiv = "refresh" content = "0; url = https://classiccaleb.streamers.site" />
    </head>
    <body>
